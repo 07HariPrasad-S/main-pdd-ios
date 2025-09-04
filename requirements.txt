@@ -1,0 +1,14 @@
+celery==5.4.0
+Django==5.1.4
+django-redis==5.4.0
+edge-tts==7.0.0
+langdetect==1.0.9
+multidict==6.1.0
+mysqlclient==2.2.6
+opencv-contrib-python==4.11.0.86
+opencv-python==4.11.0.86
+opencv-python-headless==4.11.0.86
+pillow==11.1.0
+PyMuPDF==1.25.1
+PyMySQL==1.1.1
+redis==5.2.1
