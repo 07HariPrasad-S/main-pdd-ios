@@ -76,10 +76,10 @@ WSGI_APPLICATION = "config.wsgi.application"
 DATABASES = {
      'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST': '127.0.0.1',
-        'NAME': 'pdf',
+        'HOST': 'mysql://root:okYfRFpngcWrvjMyrHuifGsGdBVysBDT@crossover.proxy.rlwy.net:21557/railway',
+        'NAME': 'railway',
         'USER': 'root',
-        'PASSWORD': 'tiger',
+        'PASSWORD': 'okYfRFpngcWrvjMyrHuifGsGdBVysBDT',
         'PORT':'3306',
         }
 }
@@ -137,9 +137,10 @@ EMAIL_HOST_USER = 'pdftomp3.visual@gmail.com'  # Replace with your email
 EMAIL_HOST_PASSWORD = 'jgoa jfex tdlb zsfs'  # Replace with your email password
 
 
-CELERY_BROKER_URL = 'redis://localhost:6379/0'
-CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
+CELERY_BROKER_URL = 'redis://default:uSRkedIAcuSITDwMIVACFULYWAJtWdwN@ballast.proxy.rlwy.net:46304'
+CELERY_RESULT_BACKEND = 'redis://default:uSRkedIAcuSITDwMIVACFULYWAJtWdwN@ballast.proxy.rlwy.net:46304'
 CELERY_ACCEPT_CONTENT = ['json']
 """ CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json' """
+
 CELERY_TIMEZONE = 'UTC'
