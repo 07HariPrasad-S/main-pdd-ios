@@ -71,6 +71,9 @@ WSGI_APPLICATION = "config.wsgi.application"
 
 
 # Database
+import pymysql
+pymysql.install_as_MySQLdb()
+
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
@@ -144,3 +147,4 @@ CELERY_ACCEPT_CONTENT = ['json']
 CELERY_RESULT_SERIALIZER = 'json' """
 
 CELERY_TIMEZONE = 'UTC'
+
