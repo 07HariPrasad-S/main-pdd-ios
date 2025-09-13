@@ -1,0 +1,61 @@
+version: "3.8"
+
+services:
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: mydatabase
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: mypassword
+      MYSQL_ROOT_PASSWORD: rootpassword
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql  
+
+  redis:
+    image: redis:alpine
+    restart: always
+    ports:
+      - "6379:6379"
+
+  web:
+    build: .
+    restart: always
+    depends_on:
+      - db
+      - redis
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_HOST=db
+      - DB_NAME=pdf
+      - DB_USER=root
+      - DB_PASSWORD=Suderson14@
+      - CELERY_BROKER_URL=redis://redis:6379/0
+    volumes:
+      - .:/app
+
+  celery:
+    build: .
+    restart: always
+    depends_on:
+      - web
+      - redis
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/0
+    command: celery -A celery_config worker --loglevel=info --pool=solo
+
+  celery-beat:
+    build: .
+    restart: always
+    depends_on:
+      - web
+      - redis
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/0
+    command: celery -A celery_config beat --loglevel=info
+
+volumes:
+  mysql_data:
