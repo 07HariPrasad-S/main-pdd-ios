@@ -47,8 +47,8 @@ def signup(request):
         if(form.is_valid()):
             #return redirect(reverse_lazy(""))
             print(form.cleaned_data['email'])
-            otp = random.randint(1000, 9999)
-
+            #otp = random.randint(1000, 9999)
+            otp=1111
             # Send OTP via email
             #send_mail(
              #      'Your OTP Code',
@@ -143,7 +143,8 @@ def send_otp(request):
         try:
             users = User.objects.filter(email=receiver_email)
             print(users)
-            otp = random.randint(1000, 9999)
+            #otp = random.randint(1000, 9999)
+            otp=1111
 
             #Send OTP via email
             #send_mail(
@@ -430,3 +431,4 @@ def favorite(request):
         "message": "Favorites retrieved successfully.",
         "data": data
     })
+
