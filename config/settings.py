@@ -77,15 +77,16 @@ pymysql.install_as_MySQLdb()
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-     'default': {
+    'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST': 'mysql.railway.internal',
         'NAME': 'railway',
         'USER': 'root',
         'PASSWORD': 'okYfRFpngcWrvjMyrHuifGsGdBVysBDT',
-        'PORT':'3306',
-        }
+        'HOST': 'crossover.proxy.rlwy.net',
+        'PORT': '21557',
+    }
 }
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -147,5 +148,6 @@ CELERY_ACCEPT_CONTENT = ['json']
 CELERY_RESULT_SERIALIZER = 'json' """
 
 CELERY_TIMEZONE = 'UTC'
+
 
 
