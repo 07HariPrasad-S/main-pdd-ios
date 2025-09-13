@@ -79,7 +79,7 @@ pymysql.install_as_MySQLdb()
 DATABASES = {
      'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST': 'mysql://root:okYfRFpngcWrvjMyrHuifGsGdBVysBDT@crossover.proxy.rlwy.net:21557/railway',
+        'HOST': 'mysql.railway.internal',
         'NAME': 'railway',
         'USER': 'root',
         'PASSWORD': 'okYfRFpngcWrvjMyrHuifGsGdBVysBDT',
@@ -147,4 +147,5 @@ CELERY_ACCEPT_CONTENT = ['json']
 CELERY_RESULT_SERIALIZER = 'json' """
 
 CELERY_TIMEZONE = 'UTC'
+
 
