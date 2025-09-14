@@ -21,3 +21,5 @@ urlpatterns = [
     path('privacy-policy',views.privacy,name='privacy'),
 ]
 
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
