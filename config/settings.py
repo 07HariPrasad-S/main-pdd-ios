@@ -141,13 +141,15 @@ EMAIL_HOST_USER = 'pdftomp3.visual@gmail.com'  # Replace with your email
 EMAIL_HOST_PASSWORD = 'jgoa jfex tdlb zsfs'  # Replace with your email password
 
 
-CELERY_BROKER_URL = 'redis://default:uSRkedIAcuSITDwMIVACFULYWAJtWdwN@ballast.proxy.rlwy.net:46304'
-CELERY_RESULT_BACKEND = 'redis://default:uSRkedIAcuSITDwMIVACFULYWAJtWdwN@ballast.proxy.rlwy.net:46304'
+CELERY_BROKER_URL = "redis://default:uSRkedIAcuSITDwMIVACFULYWAJtWdwN@redis.railway.internal:6379/0"
+CELERY_RESULT_BACKEND = "redis://default:uSRkedIAcuSITDwMIVACFULYWAJtWdwN@redis.railway.internal:6379/0"
+
 CELERY_ACCEPT_CONTENT = ['json']
 """ CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json' """
 
 CELERY_TIMEZONE = 'UTC'
+
 
 
 
