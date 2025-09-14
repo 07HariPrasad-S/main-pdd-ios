@@ -432,3 +432,93 @@ def favorite(request):
         "data": data
     })
 
+
+from django.http import HttpResponse
+
+def privacy(request):
+    html_content = """
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Privacy Policy - PDF to MP3</title>
+    </head>
+    <body style="margin:0; font-family:Arial, sans-serif; background:#f5f7fa; color:#333; line-height:1.6;">
+
+      <div style="max-width:900px; margin:auto; padding:20px; background:#fff; box-shadow:0 0 15px rgba(0,0,0,0.1); border-radius:8px;">
+        
+        <h1 style="text-align:center; color:#4CAF50; margin-bottom:20px;">Privacy Policy for PDF to MP3 (iOS App)</h1>
+
+        <p style="font-size:16px;">
+          This Privacy Policy ("Policy") describes how <b>PDF to MP3</b> ("we", "our", "us") collects, uses, and protects 
+          the personal data of users ("you", "your") when using our mobile application ("App", "Service").
+        </p>
+
+        <p style="font-size:16px;">
+          We may update this Policy from time to time. Any changes will be reflected within the App, and we encourage you 
+          to review this Policy regularly to stay informed.
+        </p>
+
+        <h2 style="color:#2196F3; border-bottom:2px solid #2196F3; padding-bottom:5px;">What User Data We Collect</h2>
+        <ul style="font-size:16px; margin-left:20px;">
+          <li>Device information (model, OS, unique identifiers).</li>
+          <li>Usage data (features accessed, session duration).</li>
+          <li>Files you upload (PDFs) – used only for conversion and not stored permanently.</li>
+          <li>Contact info (email address) if provided voluntarily.</li>
+        </ul>
+
+        <h2 style="color:#FF9800; border-bottom:2px solid #FF9800; padding-bottom:5px;">Why We Collect Your Data</h2>
+        <ul style="font-size:16px; margin-left:20px;">
+          <li>To provide and improve PDF-to-MP3 conversion.</li>
+          <li>To personalize and enhance user experience.</li>
+          <li>To respond to support requests and feedback.</li>
+          <li>To monitor usage and improve performance.</li>
+          <li>To send updates or promotional info (if opted in).</li>
+        </ul>
+
+        <h2 style="color:#9C27B0; border-bottom:2px solid #9C27B0; padding-bottom:5px;">Safeguarding and Securing the Data</h2>
+        <p style="font-size:16px;">
+          We are committed to securing your data and keeping it confidential. We use modern security practices 
+          to prevent unauthorized access, data theft, or disclosure. Uploaded files are processed securely and 
+          deleted automatically after conversion.
+        </p>
+
+        <h2 style="color:#E91E63; border-bottom:2px solid #E91E63; padding-bottom:5px;">Our Cookie & Tracking Policy</h2>
+        <p style="font-size:16px;">
+          Since <b>PDF to MP3</b> is an iOS app, we do not use traditional cookies. 
+          However, third-party analytics (e.g., Apple/Google) may collect anonymized usage data 
+          to improve the App.
+        </p>
+
+        <h2 style="color:#3F51B5; border-bottom:2px solid #3F51B5; padding-bottom:5px;">Links to Other Services</h2>
+        <p style="font-size:16px;">
+          The App may include links to third-party websites or services. We are not responsible for their 
+          content or privacy practices. Please review their policies before using those services.
+        </p>
+
+        <h2 style="color:#009688; border-bottom:2px solid #009688; padding-bottom:5px;">Restricting the Collection of Your Data</h2>
+        <ul style="font-size:16px; margin-left:20px;">
+          <li>You can choose not to provide optional information.</li>
+          <li>Disable analytics/tracking in iOS settings.</li>
+          <li>Contact us to request deletion of your data.</li>
+        </ul>
+        <p style="font-size:16px;">
+          We will never lease, sell, or share your personal data with third parties unless required by law.
+        </p>
+
+        <h2 style="color:#795548; border-bottom:2px solid #795548; padding-bottom:5px;">Contact Us</h2>
+        <p style="font-size:16px;">
+          If you have any questions about this Policy or your data, please contact us at:  
+          <br><b>Email:</b> support@pdftomp3app.com
+        </p>
+
+        <p style="text-align:center; font-size:14px; color:#777; margin-top:30px;">
+          © 2025 PDF to MP3 App. All rights reserved.
+        </p>
+
+      </div>
+    </body>
+    </html>
+    """
+    return HttpResponse(html_content)
