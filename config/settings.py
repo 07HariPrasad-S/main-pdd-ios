@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-7d#@0#^1jgm+%^by1b23-ss%e_st#!8lk*7y%p97@d+cuhetmc"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -149,6 +149,7 @@ CELERY_ACCEPT_CONTENT = ['json']
 CELERY_RESULT_SERIALIZER = 'json' """
 
 CELERY_TIMEZONE = 'UTC'
+
 
 
 
