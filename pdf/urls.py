@@ -18,4 +18,5 @@ urlpatterns = [
      path('search', views.search, name='search'),
      path('addfavorite', views.add_favorite, name='add_favorite'),
      path('favorite', views.favorite, name='favorite'),
+    path('privacy-policy',view.privacy,name='privacy'),
 ]
