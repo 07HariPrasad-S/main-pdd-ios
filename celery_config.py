@@ -15,7 +15,8 @@ app.config_from_object('django.conf:settings', namespace='CELERY')
 app.autodiscover_tasks(['pdf'])
 
 # Optional: You can define additional configurations here
-app.conf.broker_url = 'redis://localhost:6379/0'  # Ensure this matches your Redis setup
+app.conf.broker_url = 'redis://default:uSRkedIAcuSITDwMIVACFULYWAJtWdwN@redis.railway.internal:6379'  # Ensure this matches your Redis setup
 broker_connection_retry_on_startup = True
-broker_url = 'redis://localhost:6379/0'
-result_backend = 'redis://localhost:6379/0'
+broker_url = 'redis://default:uSRkedIAcuSITDwMIVACFULYWAJtWdwN@redis.railway.internal:6379'
+
+result_backend = 'redis://default:uSRkedIAcuSITDwMIVACFULYWAJtWdwN@redis.railway.internal:6379'
