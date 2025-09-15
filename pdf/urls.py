@@ -21,8 +21,6 @@ urlpatterns = [
      path('addfavorite', views.add_favorite, name='add_favorite'),
      path('favorite', views.favorite, name='favorite'),
     path('privacy-policy',views.privacy,name='privacy'),
-]
+]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
